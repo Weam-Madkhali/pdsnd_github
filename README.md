@@ -1,15 +1,22 @@
 ### Date created
-Include the date you created this project and README file.
+2-1-2021
 
-### Project Title
-Replace the Project Title
+### Bikeshare Project
 
 ### Description
-Describe what your project is about and what it does
+My project display data related to bike share systems for three major cities in the United States — Chicago, New York City, and Washington. And answering interesting questions about it by computing descriptive statistics. 
+All this through the user's interaction with the choice she/he would like to view :+1: .
 
 ### Files used
-Include the files used
+bikeshare.py
+chicago.csv
+new_york_city.csv
+washington.csv
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+### Credits :hibiscus:
+**Sites and videos that helps me:** 
+Practice solutions at the classroom.
+https://thehelloworldprogram.com/python/python-string-methods/
+https://www.youtube.com/watch?v=vmEHCJofslg&t=3147s
+https://stackoverflow.com/questions/59489348/filling-a-dictionary-with-multiple-user-input
+https://www.youtube.com/watch?v=BITjlIWiPso
