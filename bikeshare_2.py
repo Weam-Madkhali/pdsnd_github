@@ -1,3 +1,11 @@
+
+#Sites and videos that helps me: 
+#Practice solutions at the classroom.
+#https://thehelloworldprogram.com/python/python-string-methods/
+#https://www.youtube.com/watch?v=vmEHCJofslg&t=3147s
+#https://stackoverflow.com/questions/59489348/filling-a-dictionary-with-multiple-user-input
+#https://www.youtube.com/watch?v=BITjlIWiPso
+
 import time
 import pandas as pd
 import numpy as np
@@ -17,6 +25,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
+
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs    
     
     city_name = ""
@@ -55,6 +64,56 @@ def get_filters():
             print("invalid inputs, please try again")
             day = input('Do you want to filter by any day? or all? ').lower()
     
+
+    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+
+
+    # get user input for month (all, january, february, ... , june)
+
+
+    # get user input for day of week (all, monday, tuesday, ... sunday)
+
+
+
+    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs    
+    
+    city_name = ""
+    
+    while True:
+        city = input('Would you like to see data for chicago, new York, or washington? ').lower()
+        try:
+            if city.lower() in ['chicago','new york','washington']:
+                break
+        except:
+            print("invalid inputs, please try again")
+            city = input('Would you like to see data for chicago, new York, or washington? ').lower()
+
+    # TO DO: get user input for month (all, january, february, ... , june)
+
+    month_name = ""
+   
+    while True:
+        month = input('Do you want to filter by any month? choose from january to june or all?  ').lower()
+        try:
+            if month.lower() in ['all', 'january', 'february', 'march', 'april', 'may', 'june']: 
+                break
+        except:
+            print("invalid inputs, please try again")
+            month = input('Do you want to filter by any month? choose from january to june or all? ').lower()
+    
+    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    
+    day_name = ""
+    while True:
+        day = input('Do you want to filter by any day? or all? ').lower()
+        try:
+            if day.lower() in ['all', 'monday', 'tuesday', 'wednesday', 'friday', 'saturday', 'sunday']:
+                break
+        except:
+            print("invalid inputs, please try again")
+            day = input('Do you want to filter by any day? or all? ').lower()
+    
+
     print('-'*40)
     return city, month, day
 
@@ -160,6 +219,7 @@ def user_stats(df,city):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
+
     # TO DO: Display counts of user types
     user_types = df['User Type'].value_counts()
     print("The count of User Types  is: " + str(user_types))
@@ -178,6 +238,33 @@ def user_stats(df,city):
         print('Most common birth from the given fitered data is:  '+ str(most_common_birth))
     elif city == 'washington':
         print('This city does not contain the year of birth or gender')
+
+    # Display counts of user types
+
+
+    # Display counts of gender
+
+
+    # Display earliest, most recent, and most common year of birth
+    # TO DO: Display counts of user types
+    user_types = df['User Type'].value_counts()
+    print("The count of User Types  is: " + str(user_types))
+
+
+    # TO DO: Display counts of gender
+    if city != 'washington':
+        Gender = df['Gender'].value_counts()
+        print("The count of Gender is: " + str(Gender))
+  # TO DO: Display earliest, most recent, and most common year of birth
+        earliest_birth = df['Birth Year'].min()
+        most_recent_birth = df['Birth Year'].max()
+        most_common_birth = df['Birth Year'].mode()[0]
+        print('Earliest year of birth from the given fitered data is: '+ str(earliest_birth))
+        print('Most recent birth from the given fitered data is: '+ str(most_recent_birth))
+        print('Most common birth from the given fitered data is:  '+ str(most_common_birth))
+    elif city == 'washington':
+        print('This city does not contain the year of birth or gender')
+
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
