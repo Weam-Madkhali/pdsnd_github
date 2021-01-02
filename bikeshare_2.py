@@ -43,7 +43,7 @@ def get_filters():
     month_name = ""
    
     while True:
-        month = input('Do you want to filter by any month? from january to june or all?  ').lower()
+        month = input('Do you want to filter by any month? choose from january to june or all?  ').lower()
         try:
             if month.lower() in ['all', 'january', 'february', 'march', 'april', 'may', 'june']: 
                 break
