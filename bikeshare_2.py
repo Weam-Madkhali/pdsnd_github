@@ -49,7 +49,7 @@ def get_filters():
                 break
         except:
             print("invalid inputs, please try again")
-            month = input('Do you want to filter by any month? from january to june or all? ').lower()
+            month = input('Do you want to filter by any month? choose from january to june or all? ').lower()
     
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     
